@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="amount">0</div>
+  <div class="staking">
+    <input class="stak" type="text" placeholder="введи количество монет" />
+    <select class="stak-days" placeholder="выбери период">
+      <option value="30">30д</option>
+      <option value="60">60д</option>
+      <option value="90">90д</option>
+    </select>
+    <button class='btn-stak'>Отправить в стейкинг</button>
+  </div>
+  <div class="error"></div>
+  <table>
+    <thead>
+      <tr>
+        <th>Сумма</th>
+        <th>Период</th>
+        <th>Оставшееся время</th>
+        <th>Сумма добычи (на данный момент)</th>
+      </tr>
+    </thead>
+    <tbody class="table-body">
+    </tbody>
+
+  </table>
+  <script src="./index.js"></script>
+</body>
+
+</html>
