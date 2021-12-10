@@ -80,17 +80,17 @@ function staking() {
       console.log(row.coin)
     }
     else if (row.work) {
-      config.coin = (+config.coin + row.coin + row.sum).toFixed(4);
+      config.coin = +(+config.coin + row.coin + row.sum).toFixed(4);
       row.work = false;
     }
     // Рисуем таблицу
     tr += `<tr><td>${row.sum}</td><td>${row.period}d</td><td>${row.day}d</td><td>${row.coin}</td></tr>`;
   }
   table.innerHTML = tr;
-  amount.innerHTML = (+config.coin).toFixed(4);
+  amount.innerHTML = config.coin;
   // Вычитаем проценты кошелка со 100 дней
   if (!(config.days % 100)) {
-    config.coin -= config.coin * Math.log(config.coin) / 100;
+    config.coin -= +(config.coin * Math.log(config.coin) / 100).toFixed(4);
   }
   config.days++;
 }
