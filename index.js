@@ -89,7 +89,7 @@ function staking() {
   table.innerHTML = tr;
   amount.innerHTML = config.coin;
   // Вычитаем проценты кошелка со 100 дней
-  if (!(config.days % 100)) {
+  if (!(config.days % 100) && config.days !== 0) {
     config.coin = +(config.coin - (config.coin * Math.log(config.coin) / 100)).toFixed(4);
   }
   config.days++;
